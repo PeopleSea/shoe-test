@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>鞋盒編號報表</title>
+</head>
+<body>
+    <h1>鞋盒編號報表</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>編號</th>
+                <th>名稱</th>
+                <th>寬度</th>
+                <th>長度</th>
+                <th>高度</th>
+            </tr>
+        </thead>
+        <tbody th:remove="all-but-first">
+            <tr th:each="shoeBox : ${shoeBoxs}" >
+                <td th:text="${shoeBox.shoeBoxNumber}"/>
+                <td th:text="${shoeBox.shoeBoxName}"/>
+                <td th:text="${shoeBox.shoeBoxWidth}"/>
+                <td th:text="${shoeBox.shoeBoxLength}"/>
+                <td th:text="${shoeBox.shoeBoxHeight}"/>
+                <!-- <td th:text="${'￥' + #numbers.formatDecimal(shoe.price, 1, 2)}">￥350</td>
+                <td th:text="${#dates.format(shoe.availableFrom, 'dd-MM-yyyy')}">2018-02-20</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

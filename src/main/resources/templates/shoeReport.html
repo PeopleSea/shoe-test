@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>鞋子編號報表</title>
+</head>
+<body>
+    <h1>鞋子編號報表</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>編號</th>
+                <th>名稱</th>
+                <th>顏色</th>
+                <th>尺寸</th>
+            </tr>
+        </thead>
+        <tbody th:remove="all-but-first">
+            <tr th:each="shoe : ${shoes}">
+                <td th:text="${shoe.shoeNumber}"/>
+                <td th:text="${shoe.shoeName}"/>
+                <td th:text="${shoe.shoeColor}"/>
+                <td th:text="${shoe.shoeSize}"/>
+                <!-- <td th:text="${'￥' + #numbers.formatDecimal(shoe.price, 1, 2)}">￥350</td>
+                <td th:text="${#dates.format(shoe.availableFrom, 'dd-MM-yyyy')}">2018-02-20</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

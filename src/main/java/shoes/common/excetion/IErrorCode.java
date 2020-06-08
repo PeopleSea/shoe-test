@@ -1,0 +1,27 @@
+package shoes.common.excetion;
+
+public class IErrorCode {
+	public String ERROR_MESSAGE_KEY = "message";
+
+	public String ERROR_CODE_KEY = "errorCode";
+
+	public static String UNKNOWN_ERROR = "UNKNOWN_ERROR";
+	
+	public static String UNKNOWN_EXCEPTION = "COMMON-UNKNOWN_EXCEPTION";
+
+	public String COMMUNICATION_RUNTIME_EXCEPTION = "COMMUNICATION_RUNTIME_EXCEPTION";
+
+	public String CREATE_WS_SERVICE_FAIL = "CREATE_WS_SERVICE_FAIL";
+
+	public String PARAMETER_IS_REQUIRED = "PARAMETER_IS_REQUIRED";
+
+	public String PARAMETER_NULL_EXCEPTION = "PARAMETER_NULL_EXCEPTION";
+
+	public String CAN_NOT_BE_NEGATIVE = "CAN_NOT_BE_NEGATIVE";
+
+	public String OVER_MAX_LIMIT = "OVER_MAX_LIMIT";
+
+	public String TOO_MANY_REQUEST = "TOO_MANY_REQUEST";
+
+	public String SQL_EXECUTION_FAIL = "SQL_EXECUTION_FAIL";
+}

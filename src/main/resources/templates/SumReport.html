@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>生產過剩報表</title>
+</head>
+<body>
+    <h1>生產過剩報表</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>類別</th>
+                <th>計畫生產</th>
+                <th>實際生產多少</th>
+                <th>達成率</th>
+            </tr>
+        </thead>
+        <tbody th:remove="all-but-first">
+            <tr th:each="sum : ${sums}" >
+                <td th:text="${sum.sumType}"/>
+                <td th:text="${sum.planNum}"/>
+                <td th:text="${sum.prodNum}"/>
+                <td th:text="${sum.achiveRate}"/>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
